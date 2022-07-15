@@ -1,0 +1,310 @@
+/* Generique */
+*{
+    box-sizing: border-box;
+}
+:root{
+    scroll-behavior: smooth;
+    font-size: 62.5%; /* 1rem -> 10px*/
+    --gray: #333;
+    --graylight: #CECBCB;
+    --gray-text:#222;
+    --graylight-text:#a6a6a6;
+    --white-text:#FFF;
+
+}
+body{
+    font-size: 1.6rem; /* defini les textes de base à 16px */
+    background-color: white;
+    color: var(--gray-text);
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+
+p{
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+
+
+
+span{
+    color: var(--graylight-text);
+    font-weight: 700;
+}
+li{
+    list-style: none;
+}
+ul{
+    padding: 0;
+}
+
+
+/* Header */
+header{
+    height: 9rem;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem;
+    z-index: 99;
+}
+
+/* Texte header */
+header a{
+    color: var(--white-text);
+    font-size: 2.2rem;
+}
+#logo{
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+/* Menu1 */
+#menu a{
+    font-size: 1.8rem;
+}
+#menu .sousMenu a{
+    color: var(--gray);
+    line-height: 2.5rem ;
+    font-size: 1.4rem;
+    font-weight: 400;
+    transition: all .5s ease-in-out;
+}
+#menu{
+    position: relative;
+}
+.sousMenu{
+    width: 20rem;
+    background-color: white;
+    border: 0.2rem solid #99D75C;
+    border-radius: .3rem;
+    padding: 2.5rem 3rem;
+    position: absolute;
+    right: 0;
+    margin: 0;
+    display: none;}
+    
+#menu .sousMenu a:hover{
+    color: #99D75C;
+    padding-left: .9rem;
+    font-weight: 500;
+}
+#menu:hover .sousMenu{
+    display: block;
+}
+#menu i{
+    padding-right: .5rem;
+}
+#menu:hover .fas{
+    transform: rotate(-90deg);
+    padding-bottom: .3rem;
+    padding-left: .3rem;
+}
+
+.menuItem{
+    display: inline-block;
+    padding: 1rem;
+    position: relative;
+}
+
+#menu-deroulant{
+    top: 30px;
+    list-style: none;
+    padding: .5rem 0;
+    display: none;
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+.menuItem:hover #menu-deroulant{
+    display: block;
+}
+
+/* banner*/
+#banner{
+    width: 100%;
+    height: 40vh;
+    background-image: url(../images/missions.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    /* texte */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+#banner p{
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+}
+h1{
+    font-size: 7rem;
+    font-weight: 300;
+    margin: 30px; }
+
+
+
+/* overlay */
+#banner::after{
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .1;
+}
+h1, #banner p{
+    z-index: 1;
+    color: #99D75C;
+    font-weight: 600;
+}
+
+.container{
+    max-width: 90rem;
+    margin: 0 auto;
+    margin-top: 7rem;
+}
+#secondaire ul{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+}
+
+#secondaire ul li{
+    display: inline-block;
+    text-transform: uppercase;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-bottom: 3rem;
+    letter-spacing: .2rem;
+}
+#secondaire ul li a{
+    color: #a7b6b9;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 1.1rem;
+    transition: box-shadow .5s, color .1s;
+}
+#secondaire ul li a:hover{
+    box-shadow: inset 0 -6px 0px #99D75C;
+}
+#secondaire ul li a.active{
+    box-shadow: inset 0 -6px 0px #99D75C;
+    color: #345;
+}
+.gallery{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.imageGallery img{
+    width: 100%;
+    display: block;
+}
+.imageGallery{
+    max-width: 400px;
+    margin: 2rem 1rem;
+    opacity: 1;
+    transition: opacity .5s linear, transform .5s ease-in-out;
+    cursor:pointer;
+}
+.imageGallery:hover{
+    transform: scale(1.05);
+}
+.blocTitreGallery{
+    text-align: center;
+}
+.blocTitreGallery h3{
+    color: #345;
+    margin: 2rem 0 .5rem 0;
+    padding: 0;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.blocTitreGallery h6{
+    color: #a7b6b9;
+    margin: 0;
+    padding: 0;
+    font-size: 1.4rem;
+    font-weight: 200;
+}
+.hide{
+    opacity: 0;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
+    transition: opacity .2s;
+}
+
+/* Modal */
+#modal{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity .2s linear;
+}
+
+.imageModal{
+    width: 60%;
+    position: relative;
+    opacity: 1;
+}
+.imageModal img{
+    width: 100%;
+}
+.imageModal span{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color .3s;
+}
+.imageModal span:hover{
+    color: #333;
+}
+
+/* footer */
+footer{
+    padding: 3rem 0 2rem 0;
+    background-color: #99D75C;
+    text-align: center;
+    color: black;
+}
+footer li{
+    display: inline-block;
+    margin: 1.5rem;
+}
+footer li a{
+    font-size: 2.5rem;
+    color: black;
+    transition: color .2s;
+}
+footer li a:hover{
+    color: #fff;
+}

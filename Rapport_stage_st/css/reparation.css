@@ -1,0 +1,388 @@
+/* Generique */
+*{
+    box-sizing: border-box;
+}
+:root{
+    scroll-behavior: smooth;
+    font-size: 62.5%; /* 1rem -> 10px*/
+    --gray: #333;
+    --graylight: #CECBCB;
+    --gray-text:#222;
+    --graylight-text:#a6a6a6;
+    --white-text:#FFF;
+
+}
+body{
+    font-size: 1.6rem; /* defini les textes de base à 16px */
+    background-color: white;
+    color: var(--gray-text);
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+span{
+    color: black;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+li{
+    list-style: none;
+}
+ul{
+    padding: 0;
+}
+
+p{
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+
+/* Header */
+header{
+    height: 9rem;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem;
+}
+
+/* Texte header */
+header a{
+    color: var(--white-text);
+    font-size: 2.2rem;
+}
+#logo{
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+/* Menu */
+/* Menu */
+#menu a{
+    font-size: 1.8rem;
+}
+#menu .sousMenu a{
+    color: var(--gray);
+    line-height: 2.5rem ;
+    font-size: 1.4rem;
+    font-weight: 400;
+    transition: all .5s ease-in-out;
+}
+#menu{
+    position: relative;
+}
+.sousMenu{
+    width: 20rem;
+    background-color: white;
+    border: 0.2rem solid #99D75C;
+    border-radius: .3rem;
+    padding: 2.5rem 3rem;
+    position: absolute;
+    right: 0;
+    margin: 0;
+    display: none;}
+    
+#menu .sousMenu a:hover{
+    color: #99D75C;
+    padding-left: .9rem;
+    font-weight: 500;
+}
+#menu:hover .sousMenu{
+    display: block;
+}
+#menu i{
+    padding-right: .5rem;
+}
+#menu:hover .fas{
+    transform: rotate(-90deg);
+    padding-bottom: .3rem;
+    padding-left: .3rem;
+}
+
+
+.menuItem{
+    display: inline-block;
+    padding: 1rem;
+    position: relative;
+}
+
+#menu-deroulant{
+    top: 30px;
+    list-style: none;
+    padding: .5rem 0;
+    display: none;
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+.menuItem:hover #menu-deroulant{
+    display: block;
+}
+
+/* banner*/
+#banner{
+    width: 100%;
+    height: 70vh;
+    background-image: url(../images/mecanique.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    /* texte */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+#banner p{
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+}
+h1{
+    font-size: 7rem;
+    font-weight: 300;
+    margin: 30px; }
+
+
+
+/* overlay */
+#banner::after{
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .1;
+}
+h1, #banner p{
+    z-index: 1;
+    color: #99D75C;
+    font-weight: 600;
+}
+header{
+    z-index: 99;
+}
+
+.box{
+    width: 75rem;
+    justify-content: center;
+    margin: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    display: inline-block;
+}
+
+
+.box p{
+    text-align: left;
+    padding-left: 1rem;
+    line-height: 3rem;
+    
+    
+}
+.box h3{
+    margin-left: 1rem;
+}
+
+.auto{
+    width: 500px;
+    display: inline-block;
+    
+}
+
+
+.container2{
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    
+}
+.card{
+    width: 400px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    margin-left: 5rem;
+
+    
+    
+}
+.card img{
+    width: 100%;
+    display: block;
+    transition: all .3s;
+    
+}
+
+
+.container3{
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    
+}
+.concu2{
+    width: 400px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    margin-left: 5rem;
+
+    
+    
+}
+.concu2 img{
+    width: 100%;
+    display: block;
+    transition: all .3s;
+    
+}
+
+
+.text1{
+    margin-left : 5rem;
+    margin-right: 5rem;
+    line-height: 3rem;
+    margin-top: 6rem;
+}
+.carte{
+    text-align: center;
+    margin-top: 3rem;
+    
+}
+
+.temoignages blockquote{
+    display: block;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+blockquote {
+    min-height: 5em;
+    width: 60em;
+    padding   : 1em 4em;
+    font-size: 1.3rem;
+    font-style: italic;
+    position  : relative;
+    background-color: #dfffbe;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  blockquote::before,
+  blockquote::after {
+    position: absolute;
+    height  : 3rem;
+    
+  }
+  
+  blockquote::before {
+    content: '“';
+    top    : 0.3rem;
+    left   : 0.9rem;
+  }
+  
+  blockquote::after {
+    content: '”';
+    bottom : 0.3rem;
+    right  : 0.8rem;
+  }
+
+
+  .concu h3{
+    justify-content: center;
+    text-align: center;
+    margin-top: 5rem;
+    
+  }
+
+  .concu{
+    margin-left: 5rem;
+    margin-right: 5rem;
+    line-height: 30px;
+    
+}
+
+.box2 p{
+    margin: 2rem;
+}
+.box2 li{
+    list-style-type:disc;
+    line-height: 2rem;
+}
+
+li{
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+  
+
+  .swot{
+    justify-content: center;
+    text-align: center;
+    margin-top: 3rem;
+    display: block;
+    margin: auto;
+  }
+
+  table{
+    border: 3px solid #99D75C;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 8rem;
+}
+td{
+    font-size: 1.5rem;
+    border: 1px solid #99D75C;
+    padding: 15px;
+    text-align: le;
+    line-height: 3rem;
+}
+th{
+    border: 1px solid #99D75C;
+    padding: 15px;
+    background-color: #ffffff;
+    width: 25%;
+}
+
+
+
+
+/* footer */
+footer{
+    padding: 3rem 0 2rem 0;
+    background-color: #99D75C;
+    text-align: center;
+    color: black;
+}
+footer li{
+    display: inline-block;
+    margin: 1.5rem;
+}
+footer li a{
+    font-size: 2.5rem;
+    color: black;
+    transition: color .2s;
+}
+footer li a:hover{
+    color: #fff;
+}
+

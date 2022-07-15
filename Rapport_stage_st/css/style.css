@@ -1,0 +1,356 @@
+/* Generique */
+*{
+    box-sizing: border-box;
+}
+:root{
+    scroll-behavior: smooth;
+    font-size: 62.5%; /* 1rem -> 10px*/
+    --gray: #333;
+    --graylight: #CECBCB;
+    --gray-text:#222;
+    --graylight-text:#a6a6a6;
+    --white-text:#FFF;
+
+}
+body{
+    font-size: 1.6rem; /* defini les textes de base à 16px */
+    background-color: #f2f2f2;
+    color: var(--gray-text);
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+span{
+    color: var(--graylight-text);
+    font-weight: 700;
+}
+li{
+    list-style: none;
+}
+ul{
+    padding: 0;
+}
+
+.blocVideo{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.blocVideo video{
+    min-width: 100%;
+    min-height: 100%;
+}
+.blocTitre{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    mix-blend-mode: screen;
+}
+.blocTitre h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 100px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.blocTitre h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+/* Header */
+header{
+    height: 9rem;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem;
+    
+}
+
+/* Texte header */
+header a{
+    color: var(--white-text);
+    font-size: 2.2rem;
+}
+#logo span{
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+/* Menu */
+#menu a{
+    font-size: 1.8rem;
+}
+#menu .sousMenu a{
+    color: var(--gray);
+    line-height: 2.5rem ;
+    font-size: 1.4rem;
+    font-weight: 400;
+    transition: all .5s ease-in-out;
+}
+#menu{
+    position: relative;
+}
+.sousMenu{
+    width: 20rem;
+    background-color: white;
+    border: 0.2rem solid #99D75C;
+    border-radius: .3rem;
+    padding: 2.5rem 3rem;
+    position: absolute;
+    right: 0;
+    margin: 0;
+    display: none;
+}
+#menu .sousMenu a:hover{
+    color: #99D75C;
+    padding-left: .9rem;
+    font-weight: 500;
+}
+#menu:hover .sousMenu{
+    display: block;
+}
+#menu i{
+    padding-right: .5rem;
+}
+#menu:hover .fas{
+    transform: rotate(-90deg);
+    padding-bottom: .3rem;
+    padding-left: .3rem;
+}
+
+
+
+.menuItem{
+    display: inline-block;
+    padding: 1rem;
+    position: relative;
+}
+
+#menu-deroulant{
+    top: 30px;
+    list-style: none;
+    padding: .5rem 0;
+    display: none;
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+.menuItem:hover #menu-deroulant{
+    display: block;
+}
+
+
+
+p{
+    font-weight: 300;
+    font-size: 1.3rem;
+    }
+
+/* overlay */
+#banner::after{
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .2;
+}
+h1, #banner p{
+    z-index: 1;
+}
+header{
+    z-index: 99;
+}
+
+
+
+#presentation{
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 26rem;
+    padding: 20px;
+    background: none;
+    border-radius: 30px;
+    box-shadow: 0 1px 3px black;
+    justify-content: center;
+    margin-left: 50%;
+    margin-top: 12%;
+    border: black;
+    
+    text-align: center;
+}
+
+#presentation article{
+    margin-left: 2%;
+    text-align: center;
+}
+
+#presentation h3{
+    color: #99D75C;
+    font-weight: 700;
+}
+
+
+
+/* Section one */
+#one article{
+    width: 40rem;
+    margin: 2rem;
+    background-color: #fff;
+}
+#one article img{
+    width: 100%;
+}
+#one{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5rem;
+}
+/* texte */
+.contentOne{
+    padding: 5rem;
+}
+.contentOne div{
+    text-align: center;
+}
+.surTitre{
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    letter-spacing: .25rem;
+    padding: 0 0 1.5rem 0;
+    color: #99D75C;
+    font-weight: 500;
+}
+.surTitre::after{
+    content: '';
+    display: block;
+    width: 50%;
+    height: .1rem;
+    background-color: var(--graylight);
+    margin: 0 auto;
+    margin-top: 1.5rem;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+}
+h3{
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    color: #333;
+}
+.one_desc{
+    color: var(--graylight-text);
+    text-align: center;
+    font-weight: 300;
+    line-height: 2.5rem;
+}
+
+/* button */
+.button{
+    margin-top: 4.5rem;
+    
+    transition: transform .4s;
+}
+.button a{
+    border: .2rem solid #99D75C;
+    padding: .5rem 2.5rem;
+    text-transform: uppercase;
+    color: var(--gray);
+    transition: background-color .5s;
+}
+.button a:hover{
+    background-color: #99D75C;
+}
+.button:hover{
+    transform: scale(1.1);
+}
+
+/* Two */
+#two{
+    background-image: url(../images/cordonnier.jpg);
+    padding: 10rem 2rem 8rem 2rem;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+#two .surTitre, #two h2{
+    color: var(--white-text);
+    text-align: center;
+}
+#two .surTitre::after{
+    width: 40%;
+}
+
+/* Three */
+#three{
+    padding: 8rem 2rem;
+    text-align: center;
+}
+#three .surTitre::after{
+    width: 40%;
+}
+.imageGallery{
+    width: 50rem;
+    margin: 1rem;
+    transition: transform .5s;
+}
+.imageGallery img{
+    width: 100%;
+    border: 2rem solid white;
+}
+.galleryThree{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 120rem;
+    margin: 0 auto;
+    margin-top: 6rem;
+}
+.imageGallery:hover{
+    transform: scale(1.05);
+}
+
+
+
+/* footer */
+footer{
+    padding: 3rem 0 2rem 0;
+    background-color: #99D75C;
+    text-align: center;
+    color: black;
+}
+footer li{
+    display: inline-block;
+    margin: 1.5rem;
+}
+footer li a{
+    font-size: 2.5rem;
+    color: black;
+    transition: color .2s;
+}
+footer li a:hover{
+    color: #fff;
+}
+
